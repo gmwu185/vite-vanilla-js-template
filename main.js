@@ -1,9 +1,10 @@
-import './style.css'
-import javascriptLogo from './javascript.svg'
-import viteLogo from '/vite.svg'
-import { setupCounter } from './counter.js'
+import "styles/style.css";
+import viteLogo from "/vite.svg";
+import javascriptLogo from "img/javascript.svg"; // 這裡的 img/ 使用了 alias (別名) 設定縮寫路徑
+import pikaPic from "img/皮卡丘原型現身.webp";
+import { setupCounter } from "./src/assets/js/counter.js";
 
-document.querySelector('#app').innerHTML = `
+document.querySelector("#app").innerHTML = `
   <div>
     <a href="https://vitejs.dev" target="_blank">
       <img src="${viteLogo}" class="logo" alt="Vite logo" />
@@ -18,7 +19,9 @@ document.querySelector('#app').innerHTML = `
     <p class="read-the-docs">
       Click on the Vite logo to learn more
     </p>
+    <img src="${pikaPic}" width="300px" alt="皮卡丘原型現身" />
+    <p>pikaPic -> 別名：${pikaPic}</p>
   </div>
-`
+`;
 
-setupCounter(document.querySelector('#counter'))
+setupCounter(document.querySelector("#counter"));
