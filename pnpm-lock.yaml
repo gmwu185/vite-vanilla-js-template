@@ -11,6 +11,9 @@ devDependencies:
   vite:
     specifier: ^5.0.8
     version: 5.0.12(terser@5.27.0)
+  vite-plugin-add-timestamp:
+    specifier: ^0.0.2
+    version: 0.0.2
 
 packages:
 
@@ -487,6 +490,10 @@ packages:
       acorn: 8.11.3
       commander: 2.20.3
       source-map-support: 0.5.21
+    dev: true
+
+  /vite-plugin-add-timestamp@0.0.2:
+    resolution: {integrity: sha512-5m4n1+plwiue8+oZcdu0bMiI0RuIaC/zSxFxkyp1KG4QGmDdb9az8qCdzfBJyLUcCYSvBB79oLGIOzG6unHcaA==}
     dev: true
 
   /vite@5.0.12(terser@5.27.0):

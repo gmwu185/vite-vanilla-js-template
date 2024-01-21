@@ -1,5 +1,6 @@
 import { defineConfig } from "vite";
 import path, { resolve } from "path";
+import addTimestamp from 'vite-plugin-add-timestamp';
 
 const isProductionENV = process.env.NODE_ENV === "production";
 
@@ -27,8 +28,8 @@ export default defineConfig({
         contact: resolve(__dirname, "pages/content.html"),
       },
       output: {
-        chunkFileNames: "assets/js/[name].[hash].js",
-        entryFileNames: "assets/js/[name].[hash].js",
+        chunkFileNames: "assets/js/[name].js",
+        entryFileNames: "assets/js/[name].js",
         assetFileNames: (info) => {
           let type = info.name.split(".")[1];
           if (/png|jpe?g|svg|gif|tiff|bmp|ico|webp/i.test(type)) {
@@ -36,7 +37,7 @@ export default defineConfig({
           } else if (/css/i.test(type)) {
             type = "css";
           }
-          return `assets/${type}/[name]-[hash].[ext]`;
+          return `assets/${type}/[name].[ext]`;
         },
       },
     },
@@ -52,4 +53,7 @@ export default defineConfig({
     sourcemap: false, // 打包後的 .js 檔，多帶上 .map 
     outDir: resolve(__dirname, './docs'), // 打包檔案對應 GitHub Pages main 分支下的 docs (預設資料夾名稱) 站台根層
   },
+  plugins: [
+    addTimestamp(),
+  ],
 });
