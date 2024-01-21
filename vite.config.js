@@ -53,6 +53,18 @@ export default defineConfig({
     sourcemap: false, // 打包後的 .js 檔，多帶上 .map 
     outDir: resolve(__dirname, './docs'), // 打包檔案對應 GitHub Pages main 分支下的 docs (預設資料夾名稱) 站台根層
   },
+  css: {
+    preprocessorOptions: {
+      scss: {
+        /** additionalData 屬性專以使用 SCSS 全域變數
+          * 方式一：直接以 SCSS 變數做為值
+          * 方式二：將變數檔以 @import 方式引用
+        */
+        // additionalData: `$mainBgColor: #242424;`,
+        // additionalData: `@import "styles/_variable.scss";`,
+      },
+    },
+  },
   plugins: [
     addTimestamp(),
   ],

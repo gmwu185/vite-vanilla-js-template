@@ -1,4 +1,4 @@
-import "styles/style.css";
+import "styles/style.scss";
 import viteLogo from "/vite.svg";
 import javascriptLogo from "img/javascript.svg"; // 這裡的 img/ 使用了 alias (別名) 設定縮寫路徑
 import pikaPic from "img/皮卡丘原型現身.webp";
