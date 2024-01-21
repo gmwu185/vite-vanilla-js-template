@@ -5,22 +5,28 @@ import pikaPic from "img/皮卡丘原型現身.webp";
 import { setupCounter } from "./src/assets/js/counter.js";
 
 document.querySelector("#app").innerHTML = `
-  <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="${viteLogo}" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
-      <img src="${javascriptLogo}" class="logo vanilla" alt="JavaScript logo" />
-    </a>
-    <h1>Hello Vite!</h1>
-    <div class="card">
-      <button id="counter" type="button"></button>
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <button class="btn btn-primary my-2" id="counter" type="button"></button>
+      </div>
+      <div class="col-md-auto my-2">
+        <a class="w-25 text-center" href="https://vitejs.dev" target="_blank">
+          <img src="${viteLogo}" class="logo" alt="Vite logo" />
+        </a>
+        <a class="w-25 text-center" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
+          <img src="${javascriptLogo}" class="logo vanilla" alt="JavaScript logo" />
+        </a>
+      </div>
     </div>
-    <p class="read-the-docs">
-      Click on the Vite logo to learn more
-    </p>
-    <img src="${pikaPic}" width="300px" alt="皮卡丘原型現身" />
-    <p>pikaPic -> 別名：${pikaPic}</p>
+    <div class="row my-2">
+      <div class="col-md-auto">
+        <img src="${pikaPic}" width="300px" alt="皮卡丘原型現身" />
+      </div>
+      <div class="col-md">
+        <p>pikaPic -> 別名：${pikaPic}</p>
+      </div>
+    </div>
   </div>
 `;
 
